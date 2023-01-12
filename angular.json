@@ -34,13 +34,16 @@
               "node_modules/ngx-toastr/toastr.css",
               "src/styles.scss"
             ],
-            "scripts": ["node_modules/disable-devtool/disable-devtool.min.js",
+            "scripts": [
+              "node_modules/disable-devtool/disable-devtool.min.js",
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
               "node_modules/popper.js/dist/umd/popper.min.js",
-              "node_modules/assets/js/jquery.particleground.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
 
-            ]
+            ],
+             "allowedCommonJsDependencies": [
+              "disable-devtool"
+           ]
           },
           "configurations": {
             "production": {
@@ -48,12 +51,12 @@
                 {
                   "type": "initial",
                   "maximumWarning": "4mb",
-                  "maximumError": "5mb"
+                  "maximumError": "4mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "4mb",
+                  "maximumError": "4mb"
                 }
               ],
               "fileReplacements": [

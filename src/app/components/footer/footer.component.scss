@@ -1,0 +1,95 @@
+#Support {
+  background-color: #222;
+  background-image: url("../../../assets/images/dotted-map.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
+}
+#Support .container .row img {
+  width: 200px;
+  margin: auto;
+}
+.info h4 {
+  color: #fff;
+  margin: 30px 0;
+}
+.info p {
+  color: #b0b0b0;
+}
+.info span {
+  transition: all 0.3s;
+  text-decoration: underline;
+}
+.info span:hover {
+  color: #A96AE9;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.info ul  {
+
+}
+
+.info ul li {
+  margin: 6px 0;
+}
+.info ul li a {
+  color: #b0b0b0;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+.info ul li a:hover {
+  color: #A96AE9;
+}
+
+.info ul li a i {
+  font: 30px;
+  font-weight: bold;
+  color: yellow;
+}
+
+/////////////////////
+footer {
+  background-color: #1a1a1a;
+}
+.footer-icons ul {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.footer-icons ul li {
+  margin: 10px 10px 0 10px;
+}
+.footer-icons ul li i {
+  color: #fff;
+  transition: all 0.3s;
+}
+.footer-icons ul li:hover i {
+  color: #A96AE9 !important;
+}
+.footer-text p {
+  color: #b0b0b0;
+  margin-top: 10px;
+}
+.footer-text p a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.footer-text p a:hover:hover {
+  color: #A96AE9 !important;
+}
+
+
+
+/* start small screen */
+@media screen and (max-width: 576px) {
+  .footer-icons ul {
+    justify-content: center;
+  }
+  .footer-text {
+    text-align: center !important;
+  }
+}
+/* end small screen */

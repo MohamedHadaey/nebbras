@@ -1,0 +1,17 @@
+
+#Contact {
+  overflow: hidden;
+}
+#contact .section_head h3::after {
+  content: "G";
+  opacity: 20%;
+  color: #aaa !important;
+}
+#Contact .section_head h3 {
+  font-size: 30px;
+}
+#Contact .contact_form .section_head h3::after {
+  content: "G";
+  opacity: 10%;
+  color: #aaa !important;
+}
