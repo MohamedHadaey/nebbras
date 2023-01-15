@@ -15,6 +15,9 @@ import { ClientsComponent } from './components/clients/clients.component';
 import { SwiperModule } from "swiper/angular";
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { AboutComponent } from './components/about/about.component';
+import { GradesComponent } from './components/grades/grades.component';
 
 
 
@@ -25,7 +28,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ContactComponent,
     ClientsComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProjectsComponent,
+    AboutComponent,
+    GradesComponent
   ],
   imports: [
     BrowserModule,

@@ -2,28 +2,28 @@
   padding: 0;
 
   .container {
-      #canvas {
-          display: none;
-          width: 40px;
-          height: 30px;
-          border: none;
-          background-color: transparent;
+    #canvas {
+      display: none;
+      width: 40px;
+      height: 30px;
+      border: none;
+      background-color: transparent;
 
-          span {
-            font-size: 20px;
-            color: #888 !important;
-            transition: all 0.3s;
+      span {
+        font-size: 20px;
+        color: #888 !important;
+        transition: all 0.3s;
 
-            &:hover {
-              color: #A96AE9 !important
-            }
-          }
+        &:hover {
+          color: #A96AE9 !important
         }
+      }
+    }
 
-      .navbar-toggler:focus {
-        outline: 0 !important;
-        border: none !important;
-        box-shadow: none;
+    .navbar-toggler:focus {
+      outline: 0 !important;
+      border: none !important;
+      box-shadow: none;
     }
 
     .navbar-brand {
@@ -50,7 +50,7 @@
           }
 
           .active {
-            color: #A96AE9;
+            color: #A96AE9 !important;
           }
         }
       }

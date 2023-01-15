@@ -4,10 +4,32 @@
   "projects": "Projects",
   "contact-us": "Contact Us",
   "about-us": "About Us",
+  "about": "About Us",
   "clients": "Clients",
   "get-touch":"Get In Touch",
   "subscribe-title": "Subscribe For News",
   "email": "Your Email",
+  "contact-info": "Contact info",
   "subscribe": "Subscribe",
-  "copy-msg": "All rights reserved"
+  "copy-msg": "All rights reserved",
+  "name" : "Name",
+  "mail": "Email",
+  "phone": "Phone Number",
+  "message": "Message",
+  "mobile": "Mobile",
+  "project": "Project",
+  "more" : "More",
+  "lorem": "Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.",
+  "about-text-1": "Nibras Professional Consulting Company was established in 2023 in the Kingdom of Saudi Arabia as a holding group.",
+  "about-text-2": "It includes within it a group of companies operating in various fields such as: (real estate development - building and construction - educational field - medical field - service management).",
+  "about-text-3": "The role of the group was not limited to the local market only, but its activities extended to the Arab countries, such as the sisterly State of Kuwait, with ambitious investments aimed at strengthening the international role of the group.",
+  "nebras": "Nebbras",
+
+
+  "grades": "grades",
+  "year-experience": "Years Experience",
+  "happy-clients": "Happy Clients",
+  "projects-done": "Projects Done",
+  "get-awards": "Get Awards"
+
 }

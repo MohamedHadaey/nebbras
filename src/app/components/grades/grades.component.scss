@@ -1,0 +1,21 @@
+.grades {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 !important;
+
+  .item {
+    h3 {
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 4rem;
+      font-family: 'Poppins', sans-serif;
+      color: #A96AE9;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 600;
+      color: #37423b;
+    }
+  }
+}

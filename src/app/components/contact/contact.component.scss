@@ -1,17 +1,45 @@
-
-#Contact {
+#contact {
   overflow: hidden;
-}
-#contact .section_head h3::after {
-  content: "G";
-  opacity: 20%;
-  color: #aaa !important;
-}
-#Contact .section_head h3 {
-  font-size: 30px;
-}
-#Contact .contact_form .section_head h3::after {
-  content: "G";
-  opacity: 10%;
-  color: #aaa !important;
+
+  .contact_form {
+    .section_head {
+      margin: 20px 0;
+
+      h2 {
+        font-weight: bold;
+
+      }
+
+      .line {
+        width: 100px;
+        height: 5px;
+        background-color: #A96AE9;
+        transition: all 0.5s;
+        border-radius: 10px;
+
+      }
+
+      &:hover .line {
+        width: 150px;
+      }
+    }
+
+    form {
+      .submit_btn {
+        background: linear-gradient(to right, rgb(169, 106, 233), rgb(49, 6, 203));
+        outline: none;
+        border: none;
+        padding: 10px 50px;
+        font-weight: bold;
+        font-size: 14px;
+        border-radius: 5px;
+        color: #fff;
+        transition: all 0.3s;
+
+        &:hover {
+          outline: 1px solid rgb(187, 141, 234);
+        }
+      }
+    }
+  }
 }

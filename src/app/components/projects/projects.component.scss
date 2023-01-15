@@ -1,0 +1,122 @@
+#projects {
+  background-color: #ebebeb;
+
+
+
+
+  .container {
+    .header {
+      h2 {
+        font-weight: bold;
+
+      }
+
+      .line {
+        width: 100px;
+        height: 5px;
+        background-color: #A96AE9;
+        transition: all 0.5s;
+        border-radius: 10px;
+
+      }
+
+      &:hover .line {
+        width: 150px;
+      }
+    }
+
+    .row {
+      .card {
+        .card-body {
+          .card-title {
+            font-weight: 700;
+            font-size: 20px;
+
+            a {
+              color: #37423b;
+              transition: 0.3s;
+
+              &:hover {
+                color: #A96AE9;
+              }
+            }
+          }
+
+          .card-text {
+            font-size: 14px;
+            color: #777777;
+          }
+        }
+      }
+    }
+
+    .row {
+      padding-top: 20px;
+
+      .more_projects {
+        background: linear-gradient(to right, rgb(169, 106, 233), rgb(49, 6, 203));
+        outline: none;
+        border: none;
+        padding: 10px 40px;
+        font-weight: bold;
+        font-size: 14px;
+        border-radius: 5px;
+        color: #fff;
+        transition: all 0.3s;
+        text-decoration: none;
+        max-width: 150px;
+        margin: 20px auto;
+        text-align: center;
+
+        &:hover {
+          outline: 1px solid rgb(187, 141, 234);
+        }
+      }
+    }
+  }
+
+
+
+
+  .line {
+    width: 90%;
+    height: 1px;
+    background-color: #eee;
+    margin: 10px auto;
+  }
+
+  .trainers {
+    background: none;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .trainer-profile img {
+    max-width: 50px;
+    border-radius: 50px;
+  }
+
+  .trainer-profile span {
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #5a6c60;
+  }
+
+  .trainer-rank i {
+    color: #657a6d;
+    margin: 10px;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+  }
+
+  .trainer-rank span {
+    color: #657a6d;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}

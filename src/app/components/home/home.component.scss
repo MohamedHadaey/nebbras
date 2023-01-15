@@ -1,27 +1,63 @@
-#Home {
+#home {
   width: 100%;
   padding: 0;
   margin: 0;
   overflow: hidden;
 
   .slider {
-    position: relative;
 
-    .carousel {
-      position: relative;
+    /* begin:: new_banner */
+    .new_banner {
+      height: 100vh;
+      width: 100%;
+      width: 100%;
+      overflow-x: hidden;
 
-      .carousel-inner {
-        .carousel-item {
-          #background-video {
-            width: 100vw;
-            height: 100vh;
+      .swiper {
+        width: 100%;
+        border-radius: 0;
+        overflow: hidden;
+        direction: rtl !important;
+      }
+
+      .banner_sliders .banner_slider {
+        height: 100vh;
+        width: 100%;
+
+        &:hover {
+          cursor: grab;
+        }
+
+        .item {
+          height: 100%;
+          width: 100%;
+          position: relative;
+
+          .background {
             object-fit: cover;
             position: absolute;
             left: 0;
             right: 0;
             top: 0;
             bottom: 0;
+            width: 100%;
+            height: 100%;
             z-index: -1;
+            background-size: cover;
+            background-position: center;
+
+          }
+
+          .background-1 {
+            background-image: url("../../../assets/images/sliders/bg_1.png");
+          }
+
+          .background-2 {
+            background-image: url("../../../assets/images/sliders/bg_2.png");
+          }
+
+          .background-3 {
+            background-image: url("../../../assets/images/sliders/bg_3.png");
           }
 
           .layer {
@@ -40,100 +76,53 @@
           }
         }
 
-        .carousel-item.active .layer h1:first-of-type {
-          animation: fadeInLeft 0.5s ease forwards;
+
+      }
+
+      .swiper-slide-active .item .layer h1:first-of-type {
+        animation: fadeInLeft 1s ease forwards;
+      }
+
+      .swiper-slide-active .item .layer h1:nth-of-type(2) {
+        animation: fadeInRight 1s ease forwards;
+      }
+
+      @keyframes fadeInLeft {
+        0% {
+          opacity: 0;
+          transform: translateX(-100px);
         }
 
-        .carousel-item.active .layer h1:nth-of-type(2) {
-          animation: fadeInRight 0.5s ease forwards;
-        }
-
-        @keyframes fadeInLeft {
-          0% {
-            opacity: 0;
-            transform: translateX(-50px);
-          }
-
-          100% {
-            opacity: 1;
-            transform: translateX(0px);
-          }
-        }
-
-        @keyframes fadeInRight {
-          0% {
-            opacity: 0;
-            transform: translateX(50px);
-          }
-
-          100% {
-            opacity: 1;
-            transform: translateX(0px);
-          }
+        100% {
+          opacity: 1;
+          transform: translateX(0px);
         }
       }
 
-      .btns {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0;
-        display: flex;
-        flex-direction: column;
-
-        .btns-prev,
-        .btns-next {
-          position: relative;
-          width: 40px;
-          height: 40px;
-          border: 1px solid #fff;
-          padding: 0 3px;
-          border-radius: 3px;
-          background-color: transparent;
-          color: #aaa;
-          font-size: 1.5rem;
-
+      @keyframes fadeInRight {
+        0% {
+          opacity: 0;
+          transform: translateX(100px);
         }
 
-        .btns-prev {
-          margin-bottom: 5px;
-        }
-
-        .btns-prev::after,
-        .btns-next::after {
-          position: absolute;
-          content: "";
-          margin: 0;
-          padding: 0;
-          background-color: white;
-          width: 100%;
-          height: 100%;
-          border-radius: 3px;
-          left: -50px;
-          transition: 0.5s;
-        }
-
-        .btns-prev:hover::after,
-        .btns-next:hover::after {
-          left: 0;
-          z-index: -1;
+        100% {
+          opacity: 1;
+          transform: translateX(0px);
         }
       }
     }
-
   }
 }
-
 
 /* start media queres  */
 
 /* start small screen */
 @media screen and (max-width:576px) {
-  #Home {
+  #home {
     .slider {
-      .carousel {
-        .carousel-inner {
-          .carousel-item {
+      .new_banner {
+        .banner_sliders .banner_slider {
+          .item {
             .layer {
               h1 {
                 font-size: 20px;
@@ -149,11 +138,11 @@
 /* end small screen */
 /* start medium screen */
 @media screen and (min-width:577px) and (max-width:768px) {
-  #Home {
+  #home {
     .slider {
-      .carousel {
-        .carousel-inner {
-          .carousel-item {
+      .new_banner {
+        .banner_sliders .banner_slider {
+          .item {
             .layer {
               h1 {
                 font-size: 25px;
@@ -169,11 +158,11 @@
 /* end medium screen */
 /* start large screen */
 @media screen and (min-width:769px) and (max-width:992px) {
-  #Home {
+  #home {
     .slider {
-      .carousel {
-        .carousel-inner {
-          .carousel-item {
+      .new_banner {
+        .banner_sliders .banner_slider {
+          .item {
             .layer {
               h1 {
                 font-size: 30px;
@@ -189,11 +178,11 @@
 /* end large screen */
 /* start extra large screen */
 @media screen and (min-width:993px) and (max-width:1200px) {
-  #Home {
+  #home {
     .slider {
-      .carousel {
-        .carousel-inner {
-          .carousel-item {
+      .new_banner {
+        .banner_sliders .banner_slider {
+          .item {
             .layer {
               h1 {
                 font-size: 35px;
@@ -208,9 +197,8 @@
 
 /* end axtra large screen */
 /* start extra extra large screen */
-@media screen and (min-width:1201px) and (max-width:1400px) {
+@media screen and (min-width:1201px) and (max-width:1400px) {}
 
-}
 /* end extra extra large screen */
 
 /* end media queres*/

@@ -34,9 +34,10 @@ export class AppComponent {
     disableDevtool();
   }
 
+  ngOnInit(): void {
+    setTimeout(function(){
+      $('.loading-screen').fadeOut(1000);
+   }, 3000);
 
-
-
-
-
+  }
 }
