@@ -3,35 +3,15 @@
   <div class="slider">
     <!-- begin:: new banner -->
     <div class="new_banner">
-      <swiper [navigation]="false" [slidesPerView]="1" [loop]="true"
+      <swiper [navigation]="false" [slidesPerView]="1" [loop]="true" [loopAdditionalSlides]="3" [loopedSlides]="3"
         [autoplay]="{delay: 5000,disableOnInteraction: false}" class="mySwiper banner_sliders">
-        <ng-template swiperSlide class="banner_slider">
+        <ng-template swiperSlide class="banner_slider" *ngFor="let slider of sliders">
           <div class="item">
-            <div class="background background-1">
+            <div class="background background-1" style="background-image: url('{{slider.image}}');">
             </div>
             <div class="layer">
-              <h1 class="text-light text-center fw-bold fa-4x">نبراس للاستشارات المهنية</h1>
-              <h1 class="text-light text-center fw-bold fa-4x">Nebras Professional Consulting</h1>
-            </div>
-          </div>
-        </ng-template>
-        <ng-template swiperSlide class="banner_slider">
-          <div class="item">
-            <div class="background background-2 ">
-            </div>
-            <div class="layer">
-              <h1 class="text-light text-center fw-bold fa-4x">نبراس للاستشارات المهنية</h1>
-              <h1 class="text-light text-center fw-bold fa-4x">Nebras Professional Consulting</h1>
-            </div>
-          </div>
-        </ng-template>
-        <ng-template swiperSlide class="banner_slider">
-          <div class="item">
-            <div class="background background-3">
-            </div>
-            <div class="layer">
-              <h1 class="text-light text-center fw-bold fa-4x">نبراس للاستشارات المهنية</h1>
-              <h1 class="text-light text-center fw-bold fa-4x">Nebras Professional Consulting</h1>
+              <h1 class="text-light text-center fw-bold fa-4x">{{slider.ar_title}}</h1>
+              <h1 class="text-light text-center fw-bold fa-4x">{{slider.en_title}}</h1>
             </div>
           </div>
         </ng-template>

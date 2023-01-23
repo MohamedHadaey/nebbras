@@ -4,6 +4,7 @@ import { SwiperComponent } from "swiper/angular";
 import SwiperCore, {  Autoplay,
   Pagination,
   Scrollbar, } from "swiper";
+import { PagesService } from 'src/app/services/pages.service';
 // install Swiper modules
 SwiperCore.use([Autoplay, Pagination, Scrollbar]);
 
@@ -13,11 +14,27 @@ SwiperCore.use([Autoplay, Pagination, Scrollbar]);
   styleUrls: ['./home.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class HomeComponent implements OnInit {
 
-  constructor() { }
+
+export class HomeComponent implements OnInit {
+  sliders:any = [];
+  constructor(private _PagesService: PagesService) {
+    this.getHomeSliders();
+  }
 
   ngOnInit(): void {
   }
 
+  // get sliders of home section
+  getHomeSliders() {
+    this._PagesService.getSliders().subscribe((response:any) => {
+      if (response.status == 200 ) {
+        this.sliders = response.data;
+      } else {
+        console.log("failed")
+      }
+    } , (error:any) => {
+      console.log("failed")
+    })
+  }
 }

@@ -6,77 +6,14 @@
       </div>
     </div>
     <div class="row py-5">
-      <swiper [slidesPerView]="'auto'" [spaceBetween]="20" [loop]="true" [autoplay]="{
+      <swiper [slidesPerView]="'auto'"  [spaceBetween]="20" [loop]="true" [loopedSlides]="3" [autoplay]="{
         delay: 2000,
         disableOnInteraction: false
-      }" [centeredSlides]="true" class="swiper">
-        <ng-template swiperSlide class="swiperSlide">
+      }" [centeredSlides]="true" class="swiper" >
+        <ng-template swiperSlide class="swiperSlide" *ngFor="let client of clients">
           <div class="date">
             <div class="date-img">
-              <img src="../../../assets/images/clients/client_1.png" alt="nebbras clients">
-            </div>
-          </div>
-        </ng-template>
-        <ng-template swiperSlide class="swiperSlide">
-          <div class="date">
-            <div class="date-img">
-              <img src="../../../assets/images/clients/client_2.png" alt="nebbras clients">
-            </div>
-          </div>
-        </ng-template>
-        <ng-template swiperSlide class="swiperSlide">
-          <div class="date">
-            <div class="date-img">
-              <img src="../../../assets/images/clients/client_3.png" alt="nebbras clients">
-            </div>
-          </div>
-        </ng-template>
-        <ng-template swiperSlide class="swiperSlide">
-          <div class="date">
-            <div class="date-img">
-              <img src="../../../assets/images/clients/client_4.png" alt="nebbras clients">
-            </div>
-          </div>
-        </ng-template>
-        <ng-template swiperSlide class="swiperSlide">
-          <div class="date">
-            <div class="date-img">
-              <img src="../../../assets/images/clients/client_5.png" alt="nebbras clients">
-            </div>
-          </div>
-        </ng-template>
-        <ng-template swiperSlide class="swiperSlide">
-          <div class="date">
-            <div class="date-img">
-              <img src="../../../assets/images/clients/client_6.png" alt="nebbras clients">
-            </div>
-          </div>
-        </ng-template>
-        <ng-template swiperSlide class="swiperSlide">
-          <div class="date">
-            <div class="date-img">
-              <img src="../../../assets/images/clients/client_7.png" alt="nebbras clients">
-            </div>
-          </div>
-        </ng-template>
-        <ng-template swiperSlide class="swiperSlide">
-          <div class="date">
-            <div class="date-img">
-              <img src="../../../assets/images/clients/client_8.png" alt="nebbras clients">
-            </div>
-          </div>
-        </ng-template>
-        <ng-template swiperSlide class="swiperSlide">
-          <div class="date">
-            <div class="date-img">
-              <img src="../../../assets/images/clients/client_9.png" alt="nebbras clients">
-            </div>
-          </div>
-        </ng-template>
-        <ng-template swiperSlide class="swiperSlide">
-          <div class="date">
-            <div class="date-img">
-              <img src="../../../assets/images/clients/client_10.png" alt="nebbras clients">
+              <img [src]="client.image" [alt]="client.title">
             </div>
           </div>
         </ng-template>

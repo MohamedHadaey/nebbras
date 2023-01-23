@@ -21,6 +21,7 @@ export class NavbarComponent implements OnInit {
   getEnglish() {
     this._TranslationService.currentLang('en');
     this.currentLanguage = "en";
+    window.location.reload();
 
   }
 
@@ -28,5 +29,6 @@ export class NavbarComponent implements OnInit {
   getArabic() {
     this._TranslationService.currentLang('ar');
     this.currentLanguage = "ar";
+    window.location.reload();
   }
 }

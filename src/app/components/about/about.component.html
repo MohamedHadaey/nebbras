@@ -3,19 +3,17 @@
     <div class="row py-3">
       <div class="col-lg-6 p-3">
         <div class="about-image">
-          <img src="../../../assets/images/about/about.jpg" class="img-fluid" alt="About Nebbras">
+          <img [src]="aboutData.image" class="img-fluid" [alt]="aboutData.title">
         </div>
       </div>
       <div class="col-lg-6 p-3">
         <div class="about-caption py-3">
           <div class="row header mb-5">
-            <h2>{{"about" | translate}}</h2>
+            <h2>{{aboutData.title}}</h2>
             <div class="line">
             </div>
           </div>
-          <p>{{"about-text-1" | translate}}</p>
-          <p>{{"about-text-2" | translate}}</p>
-          <p>{{"about-text-3" | translate}}</p>
+          <div [innerHTML]="aboutData.description"></div>
         </div>
       </div>
     </div>

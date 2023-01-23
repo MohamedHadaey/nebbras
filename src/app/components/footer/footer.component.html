@@ -1,7 +1,7 @@
 <section id="Support" class="py-5 px-3">
   <div class="container">
     <div class="row pt-3">
-      <img src="../../../assets/images/complete_logo.png" alt="Nebbras Professional Consulting">
+      <img [src]="settings.image" alt="Nebbras Professional Consulting">
     </div>
     <div class="row py-5">
       <div class="col-sm-4">
@@ -19,17 +19,17 @@
       <div class="col-sm-4">
         <div class="info">
           <h4>{{"contact-info" | translate}}</h4>
-          <p>1650 Lombard Street,<br> San Francisco, CA 94123</p>
-          <p>054 266 7727</p>
-          <p>info@nebbrasc.com</p>
+          <p>{{settings.address}}</p>
+          <p>{{settings.phone}}</p>
+          <p>{{settings.email}}</p>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="info">
           <h4>{{"nebras" | translate}}</h4>
-          <p>1650 Lombard Street,<br> San Francisco, CA 94123</p>
-          <p><strong>{{"mobile" | translate}} : </strong>054 266 7727</p>
-          <p><strong>{{"mail" | translate}} : </strong>info@nebbrasc.com</p>
+          <p>{{settings.address}}</p>
+          <p><strong>{{"mobile" | translate}} : </strong>{{settings.phone}}</p>
+          <p><strong>{{"mail" | translate}} : </strong>{{settings.email}}</p>
         </div>
       </div>
     </div>
@@ -46,10 +46,10 @@
       <div class="col-sm-6 col-md-6 col-lg-6">
         <div class="footer-icons">
           <ul class="list-unstyled me-auto ">
-            <li><a href="#"><i class="fab fa-twitter "></i></a></li>
-            <li><a href="#"><i class="fab fa-facebook-f "></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram "></i></a></li>
-            <li><a href="#"><i class="fab fa-linkedin-in "></i></a></li>
+            <li><a [href]="settings.twitter"><i class="fab fa-twitter "></i></a></li>
+            <li><a [href]="settings.facebook"><i class="fab fa-facebook-f "></i></a></li>
+            <li><a [href]="settings.instagram"><i class="fab fa-instagram "></i></a></li>
+            <li><a [href]="settings.linked_in"><i class="fab fa-linkedin-in "></i></a></li>
           </ul>
         </div>
       </div>

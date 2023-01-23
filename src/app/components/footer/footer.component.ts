@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PagesService } from 'src/app/services/pages.service';
 
 @Component({
   selector: 'app-footer',
@@ -6,10 +7,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-
-  constructor() { }
+  settings:any = [];
+  constructor(private _PagesService:PagesService) {
+    this.getSettingsLink();
+   }
 
   ngOnInit(): void {
   }
 
+
+    // get data of settings
+    getSettingsLink() {
+      this._PagesService.getSettings().subscribe((response:any) => {
+        if (response.status == 200 ) {
+          this.settings = response.data;
+          console.log(this.settings);
+        } else {
+          console.log("failed")
+        }
+      } , (error:any) => {
+        console.log("failed")
+      })
+    }
 }

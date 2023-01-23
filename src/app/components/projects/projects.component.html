@@ -6,32 +6,12 @@
       </div>
     </div>
     <div class="row ">
-      <div class="col-lg-4 col-md-6 my-2">
+      <div class="col-lg-4 col-md-6 my-2" *ngFor="let project of projectsData">
         <div class="card h-100">
-          <img src="../../../assets/images/projects/project_1.jpg" class="card-img-top" alt="Content">
+          <img [src]="project.image" class="card-img-top" alt="Content">
           <div class="card-body py-3">
-            <h3 class="card-title"><a href="#">{{"project" | translate}} 1</a></h3>
-            <p class="card-text mt-3">{{"lorem" | translate}}</p>
-          </div>
-          <div class="line"></div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 my-2">
-        <div class="card h-100">
-          <img src="../../../assets/images/projects/project_2.jpg" class="card-img-top" alt="Content">
-          <div class="card-body py-3">
-            <h3 class="card-title"><a href="#">{{"project" | translate}} 2</a></h3>
-            <p class="card-text mt-3">{{"lorem" | translate}}.</p>
-          </div>
-          <div class="line"></div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 my-2">
-        <div class="card h-100">
-          <img src="../../../assets/images/projects/project_3.jpg" class="card-img-top" alt="Content">
-          <div class="card-body py-3">
-            <h3 class="card-title"><a href="#">{{"project" | translate}} 3</a></h3>
-            <p class="card-text mt-3">{{"lorem" | translate}}</p>
+            <h3 class="card-title"><a href="#">{{project.title}}</a></h3>
+            <p class="card-text mt-3">{{project.description}}</p>
           </div>
           <div class="line"></div>
         </div>

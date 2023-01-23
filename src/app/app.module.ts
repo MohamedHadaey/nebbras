@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { NgxSpinnerModule } from "ngx-spinner";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ToastrModule } from 'ngx-toastr';
@@ -18,6 +18,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { AboutComponent } from './components/about/about.component';
 import { GradesComponent } from './components/grades/grades.component';
+import { MyIntercetor } from './interceptor';
 
 
 
@@ -58,7 +59,11 @@ import { GradesComponent } from './components/grades/grades.component';
       },
     }),
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: MyIntercetor,
+    multi: true,
+  },],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
