@@ -7,7 +7,7 @@ import { PagesService } from 'src/app/services/pages.service';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-
+  allProjects:boolean = false;
   projectsData:any = [];
   constructor(private _PagesService: PagesService) {
     this.getData();
@@ -27,6 +27,11 @@ export class ProjectsComponent implements OnInit {
     } , (error:any) => {
       console.log("failed")
     })
+  }
+
+
+  showAllProjects() {
+    this.allProjects =! this.allProjects
   }
 
 }

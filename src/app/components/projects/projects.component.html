@@ -5,7 +5,19 @@
       <div class="line mx-auto">
       </div>
     </div>
-    <div class="row ">
+    <div class="row justify-content-center" *ngIf="!allProjects">
+      <div class="col-lg-4 col-md-6 my-2" *ngFor="let project of projectsData.slice(0,3)" >
+        <div class="card h-100">
+          <img [src]="project.image" class="card-img-top" alt="Content">
+          <div class="card-body py-3">
+            <h3 class="card-title"><a href="#">{{project.title}}</a></h3>
+            <p class="card-text mt-3">{{project.description}}</p>
+          </div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center all-projects" *ngIf="allProjects">
       <div class="col-lg-4 col-md-6 my-2" *ngFor="let project of projectsData">
         <div class="card h-100">
           <img [src]="project.image" class="card-img-top" alt="Content">
@@ -18,7 +30,7 @@
       </div>
     </div>
     <div class="row">
-      <a class="more_projects" href="#">{{"more" | translate}}</a>
+      <a class="more_projects hover" (click)="showAllProjects()">{{"more" | translate}}</a>
     </div>
   </div>
 </section>

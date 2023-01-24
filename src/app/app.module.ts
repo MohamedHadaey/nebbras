@@ -19,8 +19,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { AboutComponent } from './components/about/about.component';
 import { GradesComponent } from './components/grades/grades.component';
 import { MyIntercetor } from './interceptor';
-
-
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -42,6 +41,7 @@ import { MyIntercetor } from './interceptor';
     HttpClientModule,
     NgxSpinnerModule,
     SwiperModule,
+    GoogleMapsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
       timeOut: 2000,

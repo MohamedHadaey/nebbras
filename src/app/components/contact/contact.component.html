@@ -32,9 +32,11 @@
       </div>
       <div class="col-lg-6 text-center">
         <div class="location overflow-hidden text-center rounded rounded-3">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d659076.3400160264!2d6.6937375050152825!3d49.813948406825276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479545b9ca212147%3A0x64db60f602d392ef!2z2YTZiNmD2LPZhdio2YjYsdi6!5e0!3m2!1sar!2seg!4v1642094458402!5m2!1sar!2seg"
-            width="800" height="600" style="border:0;" allowfullscreen="true" loading="lazy"></iframe>
+            <google-map height="600" width="600" [center]="center" [zoom]="8" >
+              <map-marker  [markerPosition]="location" [icon]="location.status"
+              [position]="location.position"
+              ></map-marker>
+            </google-map>
         </div>
       </div>
     </div>

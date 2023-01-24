@@ -21,7 +21,6 @@ export class FooterComponent implements OnInit {
       this._PagesService.getSettings().subscribe((response:any) => {
         if (response.status == 200 ) {
           this.settings = response.data;
-          console.log(this.settings);
         } else {
           console.log("failed")
         }
