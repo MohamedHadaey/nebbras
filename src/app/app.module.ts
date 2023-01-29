@@ -31,7 +31,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
     NavbarComponent,
     ProjectsComponent,
     AboutComponent,
-    GradesComponent
+    GradesComponent,
   ],
   imports: [
     BrowserModule,

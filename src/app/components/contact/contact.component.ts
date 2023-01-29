@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PagesService } from 'src/app/services/pages.service';
+import { DomSanitizer } from "@angular/platform-browser";
 declare var google: any;
 declare const $: any;
 @Component({
@@ -9,12 +10,10 @@ declare const $: any;
 })
 export class ContactComponent implements OnInit {
   settings: any = [];
-  lat:any = 30.031092580675658;
-  lng:any = 31.225590705871582;
-  constructor(private _PagesService: PagesService) {
+  locationSrc!:any;
+  finalLocationSrc!:any;
+  constructor(private _PagesService: PagesService, private sanitizer: DomSanitizer) {
     this.getLocation();
-
-
   }
 
   ngOnInit(): void {}
@@ -25,9 +24,8 @@ export class ContactComponent implements OnInit {
       (response: any) => {
         if (response.status == 200) {
           this.settings = response.data;
-          console.log(this.settings.lat, this.settings.lng);
-          this.lat = this.settings.lat
-          this.lng = this.settings.lng
+          this.locationSrc = `https://maps.google.com/maps?q=${this.settings.lat},${this.settings.lng}&z=8&output=embed&z=11`;
+          this.finalLocationSrc = this.sanitizer.bypassSecurityTrustResourceUrl(this.locationSrc)
         } else {
           console.log('failed');
         }
@@ -37,36 +35,4 @@ export class ContactComponent implements OnInit {
       }
     );
   }
-
-  // the location on map
-  center: google.maps.LatLngLiteral = {
-    lat: this.lat,
-    lng: this.lng,
-  };
-
-  location: googleMaps_ApiReturn = {
-    position: {
-      lat: this.lat,
-      lng: this.lng
-    },
-    status: {
-      scaledSize: {
-        height: 40,
-        width: 40,
-        equals(other) {
-          return true;
-        },
-      },
-      url: '../../../../assets/maps_images/location.png',
-    },
-  };
-}
-
-interface ProjectStatus {
-  iconurl: string;
-}
-
-interface googleMaps_ApiReturn {
-  position: google.maps.LatLngLiteral;
-  status: google.maps.Icon;
 }
