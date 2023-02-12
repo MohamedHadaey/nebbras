@@ -31,7 +31,7 @@ export class AppComponent {
       });
 
     // to disable inspect element and f12 button
-    disableDevtool();
+    // disableDevtool();
   }
 
   ngOnInit(): void {
